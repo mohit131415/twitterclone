@@ -1,0 +1,201 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  color: grey;
+  font-family: Arial, sans-serif;
+}
+
+.engagement-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.1s;
+  padding: 5px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  color: grey;
+  transition: color 0.3s, fill 0.3s;
+}
+
+.count {
+  color: grey;
+  transition: color 0.3s;
+}
+
+/* Non-active (default) state: grey */
+.button:hover .icon, .button:hover .count {
+  color: #1da1f2;  /* Default hover color for non-active state */
+}
+
+/* Add hover color for retweet button */
+#retweets:hover .icon, #retweets:hover .count {
+  color: #00ba7c;
+}
+
+/* Add hover color for like button */
+#likes:hover .icon, #likes:hover .count {
+  color: #f91880;
+}
+
+/* Active States */
+.active-like .icon, .active-like .count {
+  color: #f91880;  /* Liked state */
+  fill: #f91880;   /* Fill color for liked icon */
+}
+.active-retweet .icon, .active-retweet .count {
+  color: #00ba7c;  /* Retweeted state */
+  /* Remove fill for retweeted icon */
+}
+.active-bookmark .icon, .active-bookmark .count {
+  color: #1da1f2;  /* Bookmarked state */
+  fill: #1da1f2;   /* Fill color for bookmarked icon */
+}
+.active-comment .icon, .active-comment .count {
+  color: #1da1f2;  /* Commented state */
+  fill: #1da1f2;   /* Fill color for commented icon */
+}
+
+/* Hover Effect for Active States */
+.active-like:hover .icon, .active-like:hover .count {
+  color: #f91880;  /* Hover effect for liked */
+  fill: #f91880;   /* Fill color for liked icon on hover */
+}
+.active-retweet:hover .icon, .active-retweet:hover .count {
+  color: #00ba7c;  /* Hover effect for retweeted */
+  /* Remove fill for retweeted icon on hover */
+}
+.active-bookmark:hover .icon, .active-bookmark:hover .count {
+  color: #1da1f2;  /* Hover effect for bookmarked */
+  fill: #1da1f2;   /* Fill color for bookmarked icon on hover */
+}
+.active-comment:hover .icon, .active-comment:hover .count {
+  color: #1da1f2;  /* Hover effect for commented */
+  fill: #1da1f2;   /* Fill color for commented icon on hover */
+}
+
+/* Share Dropdown */
+.share-container {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  width: 200px;
+  background-color: #1b1f23;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  padding: 8px 12px;
+}
+
+.dropdown-item:hover {
+  background-color: #3e4448;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1b1f23;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  color: white;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #2b2e33;
+  color: white;
+  border: none;
+}
+
+.button-blue {
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.button-blue:hover {
+  background-color: #178cd9;
+}
+
+.button-gray {
+  background-color: #4b4b4b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.button-gray:hover {
+  background-color: #3e3e3e;
+}
